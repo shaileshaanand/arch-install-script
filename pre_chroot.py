@@ -73,7 +73,8 @@ if __name__ == "__main__":
         "linux-firmware",
         "vim",
         "dhcpcd",
-        "iwd"
+        "iwd",
+        "zsh",
     ]
     create_mounts(
         Path("/dev/nvme0n1p2"),
