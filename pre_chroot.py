@@ -75,6 +75,8 @@ if __name__ == "__main__":
         "dhcpcd",
         "iwd",
         "zsh",
+        "grub",
+        "efibootmgr"
     ]
     create_mounts(
         Path("/dev/nvme0n1p2"),

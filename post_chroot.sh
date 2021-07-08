@@ -15,3 +15,5 @@ systemctl enable dhcpcd
 echo root:$PASSWORD | chpasswd
 useradd -m -g users -G wheel,storage,power -s /bin/zsh $USERNAME
 echo $USERNAME:$PASSWORD | chpasswd
+mkdir /boot/efi
+grub-install --target=x86_64-efi --bootloader-id=ARCHLINUX --efi-directory=/boot/efi --recheck
