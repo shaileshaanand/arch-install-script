@@ -39,7 +39,7 @@ def create_mounts(install_partition: Path, mount_points: List[Tuple[str]], subvo
 
     # Path(mount_prefix).mkdir(parents=True, exist_ok=True)
     if swap:
-        execute(["mkfs.swap", str(swap)])
+        execute(["mkswap", str(swap)])
         execute(["swapon", str(swap)])
     execute(
         ["mkdir", "-p", str(mount_prefix)])
