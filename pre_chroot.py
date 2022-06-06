@@ -22,9 +22,10 @@ BTRFS_MOUNT_OPTIONS = [
     "ssd",
     "noatime",
     "discard=async",
-    "space_cache",
+    "space_cache=v2",
     "commit=120",
     "compress=zstd",
+    "auto_defrag",
     "subvol={subvol}"
 ]
 
@@ -85,8 +86,10 @@ if __name__ == "__main__":
             ("/home", "@home"),
             ("/.snapshots", "@root_snapshots"),
             ("/home/.snapshots", "@home_snapshots"),
-            ("/var/log", "@var_log"),
-            ("/var/cache/pacman/pkg", "@pkg_cache"),
+            ("/var/log", "@log"),
+            ("/var/cache", "@cache"),
+            ("/var/tmp", "@tmp"),
+            ("/srv", "@srv"),
         ],
         subvol_prefix,
         mount_prefix,
